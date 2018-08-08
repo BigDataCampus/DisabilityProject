@@ -42,7 +42,7 @@ admin.add_view(ModelView(Facility, db.session))
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index-2.html')
 
 
 @app.route('/<path>')

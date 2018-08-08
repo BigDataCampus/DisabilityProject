@@ -1,12 +1,18 @@
 from flask import Flask, render_template, request
 
 from flask_sqlalchemy import SQLAlchemy
+from flask_admin import Admin
+from flask_admin.contrib.sqla import ModelView
+
 
 
 app = Flask(__name__)
 app.config.update({'SECRET_KEY':'password'})
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DisabilityDB.db'
 db = SQLAlchemy(app)
+
+admin = Admin(app)
+
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -30,16 +36,19 @@ class Facility(db.Model):
     facility_is_available = db.Column(db.String(20),nullable=False)
     PlaceID = db.Column(db.Integer,db.ForeignKey("Place.PlaceID"))
 
+admin.add_view(ModelView(User, db.session))
+admin.add_view(ModelView(Place, db.session))
+admin.add_view(ModelView(Facility, db.session))
 
 @app.route('/')
 def index():
     return render_template('index.html')
 
 
-@app.route('/a/<path>')
+@app.route('/<path>')
 def goPath(path=None):
     if path:
-       return render_template("%s.html" % path)
+       return render_template("%s" % path)
     else : return 'a'
 
 @app.route('/Place')

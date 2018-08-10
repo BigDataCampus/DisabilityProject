@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+   {{ places[0] }}
     {% for i in places %}
     {{ i.place_name }} <br>
     {% endfor %}

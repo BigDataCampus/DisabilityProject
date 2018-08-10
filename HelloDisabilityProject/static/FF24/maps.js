@@ -31,18 +31,27 @@ var infoBox_ratingType = 'star-rating';
             '</div>')
       }
 
+      var datacomeonplease = $('#map').attr('dd');
+        console.log(datacomeonplease);
+        console.log(typeof(datacomeonplease));
+        var wishgohome = JSON.parse(datacomeonplease);
       // Locations
-      var locations = [
-        [ locationData('listings-single-page.html','images/listing-item-01.jpg',"Tom's Restaurant",'964 School Street, New York', '3.5', '12'), 40.94401669296697, -74.16938781738281, 1, '<i class="im im-icon-Chef-Hat"></i>'],
-        [ locationData('listings-single-page.html','images/listing-item-02.jpg','Sticky Band','Bishop Avenue, New York', '5.0', '23'), 40.77055783505125, -74.26002502441406,          2, '<i class="im im-icon-Electric-Guitar"></i>'],
-        [ locationData('listings-single-page.html','images/listing-item-03.jpg','Hotel Govendor','778 Country Street, New York', '2.0', '17'), 40.7427837, -73.11445617675781,         3, '<i class="im im-icon-Home-2"></i>' ],
-        [ locationData('listings-single-page.html','images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 40.70437865245596, -73.98674011230469,     4, '<i class="im im-icon-Hamburger"></i>' ],
-        [ locationData('listings-single-page.html','images/listing-item-05.jpg','Airport','1512 Duncan Avenue, New York', '3.5', '46'), 40.641311, -73.778139,                         5, '<i class="im im-icon-Plane"></i>'],
-        [ locationData('listings-single-page.html','images/listing-item-06.jpg','Think Coffee','215 Terry Lane, New York', '4.5', '15'), 41.080938, -73.535957,                        6, '<i class="im im-icon-Coffee"></i>'],
-        [ locationData('listings-single-page.html','images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 41.079386, -73.519478,                     7, '<i class="im im-icon-Hamburger"></i>'],
+        for (i = 0; i < 10 ; i++) {
+            console.log(wishgohome[i].place_name);
+        }
 
-        [ locationData('listings-single-page.html','images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 52.368630, 4.895782,                     7, '<i class="im im-icon-Hamburger"></i>'],
-        [ locationData('listings-single-page.html','images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 52.350179, 4.634857,                     7, '<i class="im im-icon-Hamburger"></i>'],
+
+      var locations = [
+        [ locationData('listings-single-page.html','/static/images/listing-item-01.jpg',"탐탐탐탐탐탐",'964 School Street, New York', '3.5', '12'), 40.94401669296697, -74.16938781738281, 1, '<i class="im im-icon-Chef-Hat"></i>'],
+        [ locationData('listings-single-page.html','/static/images/listing-item-02.jpg','Sticky Band','Bishop Avenue, New York', '5.0', '23'), 40.77055783505125, -74.26002502441406,          2, '<i class="im im-icon-Electric-Guitar"></i>'],
+        [ locationData('listings-single-page.html','/static/images/listing-item-03.jpg','Hotel Govendor','778 Country Street, New York', '2.0', '17'), 40.7427837, -73.11445617675781,         3, '<i class="im im-icon-Home-2"></i>' ],
+        [ locationData('listings-single-page.html','/static/images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 40.70437865245596, -73.98674011230469,     4, '<i class="im im-icon-Hamburger"></i>' ],
+        [ locationData('listings-single-page.html','/static/images/listing-item-05.jpg','Airport','1512 Duncan Avenue, New York', '3.5', '46'), 40.641311, -73.778139,                         5, '<i class="im im-icon-Plane"></i>'],
+        [ locationData('listings-single-page.html','/static/images/listing-item-06.jpg','Think Coffee','215 Terry Lane, New York', '4.5', '15'), 41.080938, -73.535957,                        6, '<i class="im im-icon-Coffee"></i>'],
+        [ locationData('listings-single-page.html','/static/images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 41.079386, -73.519478,                     7, '<i class="im im-icon-Hamburger"></i>'],
+
+        [ locationData('listings-single-page.html','/static/images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 52.368630, 4.895782,                     7, '<i class="im im-icon-Hamburger"></i>'],
+        [ locationData('listings-single-page.html','/static/images/listing-item-04.jpg','Burger House','2726 Shinn Street, New York', '5.0', '31'), 52.350179, 4.634857,                     7, '<i class="im im-icon-Hamburger"></i>'],
       ];
 
       // Chosen Rating Type
@@ -61,7 +70,12 @@ var infoBox_ratingType = 'star-rating';
       // ----------------------------------------------- //
 
       var mapZoomAttr = $('#map').attr('data-map-zoom');
+      console.log(mapZoomAttr);
       var mapScrollAttr = $('#map').attr('data-map-scroll');
+
+
+
+
 
       if (typeof mapZoomAttr !== typeof undefined && mapZoomAttr !== false) {
           var zoomLevel = parseInt(mapZoomAttr);
@@ -178,6 +192,7 @@ var infoBox_ratingType = 'star-rating';
         google.maps.event.addDomListener(overlay, 'click', (function(overlay, i) {
 
         return function() {
+            console.log(locations[i][0])
              ib.setOptions(boxOptions);
              boxText.innerHTML = locations[i][0];
              ib.close();
@@ -207,7 +222,7 @@ var infoBox_ratingType = 'star-rating';
       // ----------------------------------------------- //
 
       var options = {
-          imagePath: 'images/',
+          imagePath: '/static/images/',
           styles : clusterStyles,
           minClusterSize : 2
       };

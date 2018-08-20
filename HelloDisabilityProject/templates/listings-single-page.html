@@ -12,11 +12,11 @@
 			<!-- Titlebar -->
 			<div id="titlebar" class="listing-titlebar">
 				<div class="listing-titlebar-title">
-					<h2>Burger House <span class="listing-tag">Eat & Drink</span></h2>
+					<h2>{{ info[0].place_name }}<span class="listing-tag">{{ info[0].category }}</span></h2>
 					<span>
 						<a href="#listing-location" class="listing-address">
 							<i class="fa fa-map-marker"></i>
-							2726 Shinn Street, New York
+							{{ info[0].place_address }}
 						</a>
 					</span>
 					<div class="star-rating" data-rating="5">
@@ -52,12 +52,9 @@
 				<!-- Amenities -->
 				<h3 class="listing-desc-headline">Amenities</h3>
 				<ul class="listing-features checkboxes margin-top-0">
-					<li>Elevator in building</li>
-					<li>Friendly workspace</li>
-					<li>Instant Book</li>
-					<li>Wireless Internet</li>
-					<li>Free parking on premises</li>
-					<li>Free parking on street</li>
+					{% for i in facinfo %}
+                        <li>{{ i.facility_available_name }}</li>
+                    {% endfor %}
 				</ul>
 			</div>
 
@@ -127,7 +124,7 @@
 				<h3 class="listing-desc-headline margin-top-60 margin-bottom-30">Location</h3>
 
 				<div id="singleListingMap-container">
-					<div id="singleListingMap" data-latitude="40.70437865245596" data-longitude="-73.98674011230469" data-map-icon="im im-icon-Hamburger"></div>
+					<div id="singleListingMap" data-latitude={{ info[0].lat }} data-longitude={{ info[0].lng }} data-map-icon="im im-icon-Hamburger"></div>
 					<a href="#" id="streetView">Street View</a>
 				</div>
 			</div>

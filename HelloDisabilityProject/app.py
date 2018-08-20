@@ -24,7 +24,7 @@ class User(db.Model):
         return '<User %r>' % self.username
 
 class Place(db.Model):
-    placeID = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    place_ID = db.Column(db.Integer, primary_key=True, autoincrement=True)
     place_name = db.Column(db.String(20), nullable=False)
     place_address = db.Column(db.String(100), nullable=False)
     lat = db.Column(db.FLOAT, nullable=False)
@@ -35,7 +35,7 @@ class Place(db.Model):
     def serialize(self):
         """Return object data in easily serializeable format"""
         return {
-            'placeID':self.placeID,
+            'place_ID':self.place_ID,
             'place_name':self.place_name,
             'place_address' : self.place_address,
             'lat' : self.lat,
@@ -44,10 +44,10 @@ class Place(db.Model):
         }
 
 class Facility(db.Model):
-    facilityID = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    facility_ID = db.Column(db.Integer, primary_key=True, autoincrement=True)
     facility_available_name = db.Column(db.String(50),nullable=False)
     facility_is_available = db.Column(db.String(20),nullable=False)
-    PlaceID = db.Column(db.Integer,db.ForeignKey("Place.PlaceID"))
+    Place_ID = db.Column(db.Integer,db.ForeignKey("Place.Place_ID"))
 
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Place, db.session))
@@ -73,10 +73,26 @@ def showPlace():
 @app.route('/listing')
 def PlaceSetting():
     places = Place.query.all()
-    print("pp",places)
     json_list = [i.serialize for i in places]
-    print(json_list)
     return render_template('base2.html', places = json_list)
 
+@app.route('/listings-single')
+def PlaceSingleListing():
+    place_id = request.args.get('place_ID')
+    info = Place.query.filter_by(place_ID=place_id)
+    facinfo = Facility.query.filter_by(Place_ID = place_id)
+
+    return render_template("listings-single-page.html", info = info.all(), facinfo = facinfo.all())
 if __name__ == '__main__':
     app.run()
+
+
+
+
+
+
+
+
+
+
+

@@ -33,7 +33,7 @@
     </div>
 
 
-
+<form action="/listing">
 	<div class="main-search-inner">
 
 		<div class="container">
@@ -43,7 +43,7 @@
 					<div class="main-search-input">
 
 						<div class="main-search-input-item">
-							<input type="text" placeholder="What are you looking for?" value=""/>
+							<input type="text" name="content" placeholder="What are you looking for?" value=""/>
 						</div>
 
 						<div class="main-search-input-item location">
@@ -64,7 +64,7 @@
 							</select>
 						</div>
 
-						<button class="button">Search</button>
+						<input type="submit" class="button" value="Search"></input>
 
 					</div>
 				</div>
@@ -72,6 +72,7 @@
 		</div>
 
 	</div>
+</form>
 
     <!-- Scroll Enabling Button -->
 	<a href="#" id="scrollEnabling" title="Enable or disable scrolling on map">Enable Scrolling</a>

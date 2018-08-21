@@ -72,7 +72,12 @@ def showPlace():
 
 @app.route('/listing')
 def PlaceSetting():
-    places = Place.query.all()
+    content = request.args.get("content")
+    print("ccc:",content)
+    if content :
+        places = Place.query.filter(Place.place_name.like('%'+content+'%'))
+    else :
+        places = Place.query.all()
     json_list = [i.serialize for i in places]
     return render_template('base2.html', places = json_list)
 

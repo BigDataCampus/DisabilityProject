@@ -79,14 +79,25 @@ def showPlace():
     print(places)
     return render_template("show.html", places = places)
 
-@app.route('/listing')
+@app.route('/listing', methods=['POST', 'GET'])
 def place_Setting():
     content = request.args.get("content")
     print("ccc:",content)
-    if content :
-        places = Place.query.filter(Place.place_name.like('%'+content+'%'))
+
+    if request.method == 'GET':
+        if content:
+            places = Place.query.filter(Place.place_name.like('%' + content + '%'))
+        else:
+            places = Place.query.all()
     else :
-        places = Place.query.all()
+        lat = request.form['lat']
+        lng = request.form['lng']
+        print(lat, lng)
+        from CF import contentCF
+        cf = list(contentCF(lat, lng))
+        cf = map(int, cf)
+        places = Place.query.filter(Place.place_ID.in_(cf)).all()
+
     json_list = [i.serialize for i in places]
     return render_template('base2.html', places = json_list)
 
@@ -105,6 +116,21 @@ def place_SingleListing(place_id):
     facinfo = Facility.query.filter_by(Place_ID = place_id)
 
     return render_template("listings-single-page.html", info = info.all(), facinfo = facinfo.all())
+
+@app.route('/getCF', methods=['POST'])
+def getCF():
+    lat = request.form['lat']
+    lng = request.form['lng']
+    print(lat, lng)
+    from CF import contentCF
+    cf = list(contentCF(lat, lng))
+    cf = map(int, cf)
+    places = Place.query.filter(Place.place_ID.in_(cf)).all()
+    p = [i.serialize for i in places]
+    print(places)
+    print(p)
+    return json.dumps(p)
+
 if __name__ == '__main__':
     app.run()
 

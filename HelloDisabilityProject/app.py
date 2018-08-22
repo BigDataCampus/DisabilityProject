@@ -49,6 +49,15 @@ class Facility(db.Model):
     facility_is_available = db.Column(db.String(20),nullable=False)
     Place_ID = db.Column(db.Integer,db.ForeignKey("Place.Place_ID"))
 
+    @property
+    def serialize(self):
+        return {
+            'facility_ID':self.facility_ID,
+            'facility_available_name':self.facility_available_name,
+            'facility_is_available':self.facility_is_available,
+            'place_ID':self.Place_ID
+        }
+
 admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Place, db.session))
 admin.add_view(ModelView(Facility, db.session))
@@ -71,7 +80,7 @@ def showPlace():
     return render_template("show.html", places = places)
 
 @app.route('/listing')
-def PlaceSetting():
+def place_Setting():
     content = request.args.get("content")
     print("ccc:",content)
     if content :
@@ -81,9 +90,17 @@ def PlaceSetting():
     json_list = [i.serialize for i in places]
     return render_template('base2.html', places = json_list)
 
-@app.route('/listings-single')
-def PlaceSingleListing():
-    place_id = request.args.get('place_ID')
+
+@app.route('/getData')
+def getData():
+    data = request.args.get('a')
+    fac = Facility.query.filter_by(Place_ID=data)
+    f = [i.serialize for i in fac]
+    return json.dumps(f)
+
+
+@app.route('/listings-single/<place_id>')
+def place_SingleListing(place_id):
     info = Place.query.filter_by(place_ID=place_id)
     facinfo = Facility.query.filter_by(Place_ID = place_id)
 

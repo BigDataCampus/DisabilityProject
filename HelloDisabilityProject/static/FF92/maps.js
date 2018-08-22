@@ -12,25 +12,34 @@ var infoBox_ratingType = 'star-rating';
 
       // Infobox Output
       function locationData(locationURL,locationImg,locationTitle, locationAddress, locationRating, locationRatingCounter) {
-          return(''+
-            '<a href="'+ locationURL +'" class="listing-img-container">'+
+          return [locationURL,locationImg,locationTitle, locationAddress, locationRating, locationRatingCounter]
+      }
+      function lolo(loData, facarray) {
+            var html = (''+
+            '<a href="'+ loData[0] +'" class="listing-img-container">'+
                '<div class="infoBox-close"><i class="fa fa-times"></i></div>'+
-               '<img src="'+locationImg+'" alt="">'+
+               '<img src="'+loData[1]+'" alt="">'+
 
-               '<div class="listing-item-content">'+
-                  '<h3>'+locationTitle+'</h3>'+
-                  '<span>'+locationAddress+'</span>'+
+               '<div class="listing-item-content">');
+
+                for(var i = 0; i < facarray.length; i++) {
+                    html += '<h4 style="color:orangered">'+facarray[i]+'</h4>';
+                }
+
+
+                html += ('<h3>'+loData[2]+'</h3>'+
+                  '<span>'+loData[3]+'</span>'+
                '</div>'+
-
-
 
             '</a>'+
 
             '<div class="listing-content">'+
                '<div class="listing-title">'+
-                  '<div class="'+infoBox_ratingType+'" data-rating="'+locationRating+'"><div class="rating-counter">('+locationRatingCounter+' reviews)</div></div>'+
+                  '<div class="'+infoBox_ratingType+'" data-rating="'+loData[4]+'"><div class="rating-counter">('+loData[5]+' reviews)</div></div>'+
                '</div>'+
-            '</div>')
+            '</div>');
+
+          return html
       }
 
       var datacomeonplease = $('#map').attr('dd');
@@ -42,7 +51,7 @@ var infoBox_ratingType = 'star-rating';
         var locations2 = new Array();
 
         for (i = 0; i < wishgohome.length; i++) {
-            locations2.push([locationData('listings-single?place_ID='+wishgohome[i].place_ID, '/static/images/listing-item-01.jpg', wishgohome[i].place_name,wishgohome[i].place_address,'4.0','10'), wishgohome[i].lat, wishgohome[i].lng, i, '<i class="im im-icon-Chef-Hat"></i>']);
+            locations2.push([locationData('listings-single/'+wishgohome[i].place_ID, '/static/images/listing-item-01.jpg', wishgohome[i].place_name,wishgohome[i].place_address,'4.0','10'), wishgohome[i].lat, wishgohome[i].lng, i, '<i class="im im-icon-Chef-Hat"></i>',wishgohome[i].place_ID]);
         }
 
       // Chosen Rating Type
@@ -68,6 +77,7 @@ var infoBox_ratingType = 'star-rating';
 
 
 
+
       if (typeof mapZoomAttr !== typeof undefined && mapZoomAttr !== false) {
           var zoomLevel = parseInt(mapZoomAttr);
       } else {
@@ -85,6 +95,7 @@ var infoBox_ratingType = 'star-rating';
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: zoomLevel,
         scrollwheel: scrollEnabled,
+        isfind : false,
         center: new google.maps.LatLng(37.5, 127.0),
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         zoomControl: false,
@@ -142,7 +153,7 @@ var infoBox_ratingType = 'star-rating';
               },
               closeBoxMargin: "0",
               closeBoxURL: "",
-              infoBoxClearance: new google.maps.Size(25, 25),
+              infoBoxClearance: new google.maps.Size(35, 25),
               isHidden: false,
               pane: "floatPane",
               enableEventPropagation: false,
@@ -183,12 +194,23 @@ var infoBox_ratingType = 'star-rating';
         google.maps.event.addDomListener(overlay, 'click', (function(overlay, i) {
 
         return function() {
-            console.log(locations2[i][0])
-             ib.setOptions(boxOptions);
-             boxText.innerHTML = locations2[i][0];
-             ib.close();
-             ib.open(map, overlay);
-             currentInfobox = locations2[i][3];
+            ib.setOptions(boxOptions);
+            $.getJSON('/getData', {
+                a: locations2[i][5]
+            }, function (data) {
+                 console.log(data);
+                 var fay = new Array();
+                 for (var i = 0; i < data.length; i++) {
+                     fay.push(data[i].facility_available_name);
+                 }
+                console.log(locations2[i][0]);
+                boxText.innerHTML = lolo(locations2[i][0], fay);
+                 ib.close();
+                 ib.open(map, overlay);
+                 currentInfobox = locations2[i][3];
+            });
+
+
              // var latLng = new google.maps.LatLng(locations[i][1], locations[i][2]);
              // map.panTo(latLng);
              // map.panBy(0,-90);
@@ -285,6 +307,9 @@ var infoBox_ratingType = 'star-rating';
       })
 
 
+
+
+
       // Geo Location Button
       $("#geoLocation, .input-with-icon.location a").click(function(e){
           e.preventDefault();
@@ -297,19 +322,65 @@ var infoBox_ratingType = 'star-rating';
               navigator.geolocation.getCurrentPosition(function (position) {
                   var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
                   map.setCenter(pos);
-                  map.setZoom(12);
+                  addMarker(pos, map);
+                  map.setZoom(17);
               });
           }
       }
+    var setfind = $("#gonnafind");
+     $(setfind).click(function(e) {
+         e.preventDefault();
+         $(this).toggleClass("enabled");
+
+         if ( $(this).is(".enabled")) {
+            map.setOptions({'isfind':true});
+         } else {
+             map.setOptions({'isfind':false});
+         }
+         map.addListener('click', function(e) {
+             if(map.get('isfind')) {
+                 addMarker(e.latLng, map);
+                 showMarkers(map);
+             } else {
+                deleteMarkers(map);
+             }
+        });
+     })
 
     }
 
-
+    var markers = [];
     // Map Init
     var map =  document.getElementById('map');
     if (typeof(map) != 'undefined' && map != null) {
       google.maps.event.addDomListener(window, 'load',  mainMap);
     }
+
+
+    function addMarker(location, map) {
+        var marker = new google.maps.Marker({
+          position: location,
+          map: map
+        });
+        markers.push(marker);
+
+      }
+
+      function setMapOnAll(map) {
+        for (var i = 0; i < markers.length; i++) {
+          markers[i].setMap(map);
+        }
+      }
+      function clearMarkers(map) {
+        setMapOnAll(null);
+      }
+      function showMarkers(map) {
+        setMapOnAll(map);
+      }
+      function deleteMarkers(map) {
+        clearMarkers(map);
+        markers = [];
+      }
 
 
     // ---------------- Main Map / End ---------------- //

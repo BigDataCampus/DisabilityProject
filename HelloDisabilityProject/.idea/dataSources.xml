@@ -20,13 +20,13 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="DisabilityDB" uuid="55133f58-8979-48df-8a5c-56f81a0bbbdb">
+    <data-source source="LOCAL" name="DB2" uuid="0314fecb-c5a1-4351-a244-ca8fdeeab068">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>SQLite</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\HelloDisabilityProject\DisabilityDB.db</jdbc-url>
+      <jdbc-url>jdbc:sqlite:C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\HelloDisabilityProject\DB2.db</jdbc-url>
       <driver-properties>
         <property name="enable_load_extension" value="true" />
       </driver-properties>

@@ -9,10 +9,11 @@ import json
 
 app = Flask(__name__)
 app.config.update({'SECRET_KEY':'password'})
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DisabilityDB.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DB2.db'
 db = SQLAlchemy(app)
 
 admin = Admin(app)
+
 
 
 class User(db.Model):
@@ -24,6 +25,7 @@ class User(db.Model):
         return '<User %r>' % self.username
 
 class Place(db.Model):
+    __tablename__ = 'Place'
     place_ID = db.Column(db.Integer, primary_key=True, autoincrement=True)
     place_name = db.Column(db.String(20), nullable=False)
     place_address = db.Column(db.String(100), nullable=False)
@@ -47,7 +49,7 @@ class Facility(db.Model):
     facility_ID = db.Column(db.Integer, primary_key=True, autoincrement=True)
     facility_available_name = db.Column(db.String(50),nullable=False)
     facility_is_available = db.Column(db.String(20),nullable=False)
-    Place_ID = db.Column(db.Integer,db.ForeignKey("Place.Place_ID"))
+    place_ID = db.Column(db.Integer,db.ForeignKey("Place.place_ID"))
 
     @property
     def serialize(self):
@@ -55,7 +57,7 @@ class Facility(db.Model):
             'facility_ID':self.facility_ID,
             'facility_available_name':self.facility_available_name,
             'facility_is_available':self.facility_is_available,
-            'place_ID':self.Place_ID
+            'place_ID':self.place_ID
         }
 
 admin.add_view(ModelView(User, db.session))
@@ -90,22 +92,24 @@ def place_Setting():
         else:
             places = Place.query.all()
     else :
-        lat = request.form['lat']
-        lng = request.form['lng']
-        print(lat, lng)
-        from CF import contentCF
-        cf = list(contentCF(lat, lng))
-        cf = map(int, cf)
-        places = Place.query.filter(Place.place_ID.in_(cf)).all()
+        pass
+        # lat = request.form['lat']
+        # lng = request.form['lng']
+        # print(lat, lng)
+        # from CF import contentCF
+        # cf = list(contentCF(lat, lng))
+        # cf = map(int, cf)
+        # places = Place.query.filter(Place.place_ID.in_(cf)).all()
 
     json_list = [i.serialize for i in places]
-    return render_template('base2.html', places = json_list)
+    faclist = ['장애인 전용 주차구역','장애인용 관람석','장애인용 승강기','장애인용 화장실','주출입구 높이차이 제거','주출입구 접근로']
+    return render_template('base2.html', places = json_list, faclist = faclist)
 
 
 @app.route('/getData')
 def getData():
     data = request.args.get('a')
-    fac = Facility.query.filter_by(Place_ID=data)
+    fac = Facility.query.filter_by(place_ID=data)
     f = [i.serialize for i in fac]
     return json.dumps(f)
 
@@ -113,7 +117,7 @@ def getData():
 @app.route('/listings-single/<place_id>')
 def place_SingleListing(place_id):
     info = Place.query.filter_by(place_ID=place_id)
-    facinfo = Facility.query.filter_by(Place_ID = place_id)
+    facinfo = Facility.query.filter_by(place_ID = place_id)
 
     return render_template("listings-single-page.html", info = info.all(), facinfo = facinfo.all())
 
@@ -121,15 +125,54 @@ def place_SingleListing(place_id):
 def getCF():
     lat = request.form['lat']
     lng = request.form['lng']
+    selectedfac = request.form['selectedfac']
+    print(selectedfac, type(selectedfac))
     print(lat, lng)
-    from CF import contentCF
-    cf = list(contentCF(lat, lng))
-    cf = map(int, cf)
+    cf = list(contentCF(selectedfac, lat, lng))
+    cf = list(map(int, cf))
+    print(cf)
     places = Place.query.filter(Place.place_ID.in_(cf)).all()
     p = [i.serialize for i in places]
-    print(places)
-    print(p)
+    print("places result serialize : ", p)
     return json.dumps(p)
+
+
+import pandas as pd
+from sklearn.neighbors import NearestNeighbors
+
+def contentCF(selectedfac, lat, lng):
+    places = Place.query
+    facility = Facility.query
+
+    dfplaces = pd.read_sql(places.statement, places.session.bind)
+    dffac = pd.read_sql(facility.statement, facility.session.bind)
+
+    dummy = pd.get_dummies(dffac, columns=['facility_available_name']).groupby(['place_ID'], as_index=False).sum()
+    dummy = dummy.merge(dfplaces)
+
+    print(dummy.info())
+    dummy.drop('place_name', axis=1, inplace=True)
+    dummy.drop('facility_ID', axis=1, inplace=True)
+    dummy.drop(['category', 'place_address'], inplace=True, axis=1)
+
+    dummy.columns = ['place_id','장애인 전용 주차구역','장애인용 관람석','장애인용 승강기','장애인용 화장실','주출입구 높이차이 제거','주출입구 접근로','lat', 'lng']
+
+
+
+
+    X = dummy.iloc[:, 1:]
+    print(X.head())
+    nbrs = NearestNeighbors().fit(X)
+
+    t = [0,0,0,0,0,0, lat, lng]
+
+    s = selectedfac.split(',')
+    for i in s:
+        t[int(i)] += 1
+
+    print("knn t ",t,"\n result :",nbrs.kneighbors([t]))
+
+    return nbrs.kneighbors([t])[1][0]
 
 if __name__ == '__main__':
     app.run()

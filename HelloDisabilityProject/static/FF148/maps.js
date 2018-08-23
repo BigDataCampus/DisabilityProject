@@ -347,7 +347,6 @@ var infoBox_ratingType = 'star-rating';
              }
         });
      })
-
     }
 
     var markers = [];
@@ -364,52 +363,52 @@ var infoBox_ratingType = 'star-rating';
             position: location,
             map: map
         });
-
-
         markers.push(marker);
-        var form = document.createElement("form");
-        form.setAttribute("method", "post");
-        form.setAttribute("action", "/listing");
 
-        var hiddenField1 = document.createElement("input");
-        hiddenField1.setAttribute("type", "hidden");
-        hiddenField1.setAttribute("name", "lat");
-        hiddenField1.setAttribute("value", location.lat());
-        console.log(hiddenField1.lat);
-        form.appendChild(hiddenField1);
-
-        var hiddenField2 = document.createElement("input");
-        hiddenField2.setAttribute("type", "hidden");
-        hiddenField2.setAttribute("name", 'lng');
-        hiddenField2.setAttribute("value", location.lng());
-        form.appendChild(hiddenField2);
-
-
-        document.body.appendChild(form);
-        form.submit();
-    }
-    //     console.log(JSON.stringify({'lat':location.lat, 'lng':location.lng}));
-    //     $.ajax({
-    //         url: '/listing',
-    //         type: 'POST',
-    //         data: {'lat':location.lat, 'lng':location.lng},
-    //         dataType: 'text',
-    //         success : function(data) {
-    //             console.log("ss"+data);
-    //             // for (var i = 0; i < data.length; i++) {
-    //             //     recommendMarker.push(new google.maps.Marker({
-    //             //         position: new google.maps.LatLng(data[i].lat,data[i].lng),
-    //             //         map: map
-    //             //     }));
-    //             // }
-    //         },
-    //         error : function(er) {
-    //             alert("error "+er.status);
-    //             console.log("er"+er);
-    //         }
+    //     var form = document.createElement("form");
+    //     form.setAttribute("method", "post");
+    //     form.setAttribute("action", "/listing");
     //
-    //     })
-    //   }
+    //     var hiddenField1 = document.createElement("input");
+    //     hiddenField1.setAttribute("type", "hidden");
+    //     hiddenField1.setAttribute("name", "lat");
+    //     hiddenField1.setAttribute("value", location.lat());
+    //     console.log(hiddenField1.lat);
+    //     form.appendChild(hiddenField1);
+    //
+    //     var hiddenField2 = document.createElement("input");
+    //     hiddenField2.setAttribute("type", "hidden");
+    //     hiddenField2.setAttribute("name", 'lng');
+    //     hiddenField2.setAttribute("value", location.lng());
+    //     form.appendChild(hiddenField2);
+    //
+    //
+    //     document.body.appendChild(form);
+    //     form.submit();
+    // }
+    //     console.log(JSON.stringify({'lat':location.lat, 'lng':location.lng}));
+        $.ajax({
+            url: '/getCF',
+            type: 'POST',
+            data: {'lat':location.lat, 'lng':location.lng},
+            dataType: 'json',
+            success : function(data) {
+                console.log("ss"+data[0]);
+                for (var i = 0; i < data.length; i++) {
+                    recommendMarker.push(new google.maps.Marker({
+                        position: new google.maps.LatLng(data[i].lat ,data[i].lng),
+                        map: map
+                    }));
+                }
+                alert("추천 목록 확인하세요");
+            },
+            error : function(er) {
+                alert("error "+er.status);
+                console.log("er"+er);
+            }
+
+        })
+      }
 
         // 와.. 비동기  {'lat':location.lat, 'lng':location.lng} 랑 동기에서 location.lat 뭐가 다른지 도저히 모르겠다 gg
     // => 와 ㅅㅂ() 하나붙이니까 되네 와나 돌아버리겠네

@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f0bfe13-a7e3-44c8-8e28-75b7fb96107a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/FF182/maps.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/31aaffb9-4f60-4f39-8737-5f5bf19dd3a6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/55133f58-8979-48df-8a5c-56f81a0bbbdb.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c0334b9d-e5ec-4039-a29c-370748ecf850.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CF.py" beforeDir="false" afterPath="$PROJECT_DIR$/CF.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DisabilityDB.db" beforeDir="false" afterPath="$PROJECT_DIR$/DisabilityDB.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dummy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/dummy.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/FF148/maps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/style8.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style22.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/FF182/maps.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/FF184/maps.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base2.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-add-listing.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-add-listing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-bookings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-bookings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-bookmarks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-bookmarks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-messages-conversation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-messages-conversation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-messages.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-messages.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-my-listings.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-my-listings.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-my-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-my-profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard-reviews.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard-reviews.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-coming-soon.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-coming-soon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages-icons.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages-icons.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/venv/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +19,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/HelloDisabilityProject$HelloDisabilityProject.coverage" NAME="HelloDisabilityProject Coverage Results" MODIFIED="1535051449974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HelloDisabilityProject$HelloDisabilityProject.coverage" NAME="HelloDisabilityProject Coverage Results" MODIFIED="1535137407036" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -51,61 +37,34 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="DB2" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DB2" type="feb32156:DbDataSourceImpl" />
-        <item name="#1: schema" type="92ea39e5:Db2ImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DB2" type="feb32156:DbDataSourceImpl" />
-        <item name="#1: schema" type="92ea39e5:Db2ImplModel$Schema" />
-        <item name="Facility: table" type="7e448f98:Db2ImplModel$Table" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DB2" type="feb32156:DbDataSourceImpl" />
-        <item name="#1: schema" type="92ea39e5:Db2ImplModel$Schema" />
-        <item name="PLACE: table" type="7e448f98:Db2ImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="base2.html" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/templates/base2.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="187">
-                    <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style22.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/style22.css">
+      <file leaf-file-name="base2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="10892" selection-start-line="10892" selection-end-line="10892" />
+            <state relative-caret-position="416">
+              <caret line="68" selection-start-line="68" selection-end-line="68" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/FF182/maps.js">
+      <file leaf-file-name="style22.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/style22.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="463" column="79" selection-start-line="463" selection-start-column="79" selection-end-line="463" selection-end-column="79" />
+            <state relative-caret-position="171">
+              <caret line="10912" column="46" selection-start-line="10912" selection-start-column="35" selection-end-line="10912" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maps.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/FF184/maps.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="426" column="34" lean-forward="true" selection-start-line="426" selection-start-column="34" selection-end-line="426" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#h4#0;n#!!top" expanded="true" />
               </folding>
@@ -113,14 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="166" column="31" lean-forward="true" selection-start-line="166" selection-start-column="31" selection-end-line="166" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#58#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="367">
+              <caret line="171" column="24" lean-forward="true" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -137,7 +93,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>places</find>
       <find>burger</find>
       <find>ameni</find>
       <find>favicon</find>
@@ -154,7 +109,6 @@
       <find>latlng</find>
       <find>from</find>
       <find>geo</find>
-      <find>addMar</find>
       <find>addma</find>
       <find>addmar</find>
       <find>li</find>
@@ -167,6 +121,8 @@
       <find>map-container</find>
       <find>enable</find>
       <find>left</find>
+      <find>main-search</find>
+      <find>addMar</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,8 +136,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/FF146/maps.js" />
-        <option value="$PROJECT_DIR$/static/FF147/maps.js" />
         <option value="$PROJECT_DIR$/static/css/style8.css" />
         <option value="$PROJECT_DIR$/static/css/style9.css" />
         <option value="$PROJECT_DIR$/static/css/style10.css" />
@@ -229,8 +183,10 @@
         <option value="$PROJECT_DIR$/static/FF180/maps.js" />
         <option value="$PROJECT_DIR$/static/FF181/maps.js" />
         <option value="$PROJECT_DIR$/CF.py" />
-        <option value="$PROJECT_DIR$/templates/base2.html" />
         <option value="$PROJECT_DIR$/app.py" />
+        <option value="$PROJECT_DIR$/templates/base2.html" />
+        <option value="$PROJECT_DIR$/static/FF182/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF183/maps.js" />
       </list>
     </option>
   </component>
@@ -243,10 +199,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1840" />
-    <option name="y" value="33" />
-    <option name="width" value="1536" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="343" />
+    <option name="y" value="108" />
+    <option name="width" value="1537" />
     <option name="height" value="830" />
   </component>
   <component name="ProjectView">
@@ -276,6 +232,17 @@
             <path>
               <item name="HelloDisabilityProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloDisabilityProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloDisabilityProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloDisabilityProject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HelloDisabilityProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HelloDisabilityProject" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="FF184" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -397,23 +364,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="275" y="87" width="1229" height="664" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4986577" weight="0.32956153" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.26439232" side_tool="true" visible="true" weight="0.22968581" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.26518393" side_tool="true" visible="true" weight="0.11444653" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7348161" weight="0.15384616" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.6724832" weight="0.33050847" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.4978678" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7356077" weight="0.22968581" />
       <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49530202" weight="0.1779661" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20522387" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33276305" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="right" id="Database" order="4" visible="true" weight="0.23027718" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.0" />
       <window_info anchor="right" id="SciView" order="3" weight="0.14026846" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -421,6 +387,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Database Console" order="13" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946696" weight="0.32936078" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,13 +577,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="2308" selection-start-line="2308" selection-end-line="2308" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/images/listing-item-01.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -672,13 +632,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://55133f58-8979-48df-8a5c-56f81a0bbbdb/schema/main/table/place">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://55133f58-8979-48df-8a5c-56f81a0bbbdb/schema/main/table/place" />
     <entry file="file://$PROJECT_DIR$/templates/listings-single-page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -707,21 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://55133f58-8979-48df-8a5c-56f81a0bbbdb/schema/main/table/facility">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" text="facility_available_name like '%'">
-            <filter text="facility_available_name like '%'" />
-            <filter text="facility_available_name like ''" />
-            <filter text="facility_available_name like '%독서당공원 %'" />
-            <filter text="facility_available_name like '%독서당공원%'" />
-            <filter text="facility_available_name like '독서당공원%'" />
-            <filter text="facility_available_name like '독서당공원'" />
-            <filter text="facility_available_name=='독서당공원'" />
-          </filtering>
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://55133f58-8979-48df-8a5c-56f81a0bbbdb/schema/main/table/facility" />
     <entry file="file://$PROJECT_DIR$/CF.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -732,20 +672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/style22.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="10892" selection-start-line="10892" selection-end-line="10892" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="85" column="35" selection-start-line="85" selection-start-column="35" selection-end-line="85" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://0314fecb-c5a1-4351-a244-ca8fdeeab068/schema/&amp;empty;@#1/table/Facility">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -753,25 +679,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/FF182/maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="463" column="79" selection-start-line="463" selection-start-column="79" selection-end-line="463" selection-end-column="79" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dummy.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="1812" selection-start-line="1812" selection-end-line="1812" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="166" column="31" lean-forward="true" selection-start-line="166" selection-start-column="31" selection-end-line="166" selection-end-column="31" />
+        <state relative-caret-position="367">
+          <caret line="171" column="24" lean-forward="true" selection-start-line="171" selection-start-column="24" selection-end-line="171" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/style22.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="10912" column="46" selection-start-line="10912" selection-start-column="35" selection-end-line="10912" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF184/maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="426" column="34" lean-forward="true" selection-start-line="426" selection-start-column="34" selection-end-line="426" selection-end-column="34" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

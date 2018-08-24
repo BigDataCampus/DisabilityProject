@@ -414,14 +414,32 @@ var infoBox_ratingType = 'star-rating';
                     deleteMarkers(map);
                 }
             });
-        })
+        });
+
+        var geocoder = new google.maps.Geocoder();
+         document.getElementById('submit').addEventListener('click', function() {
+          geocodeAddress(geocoder, map);
+        });
     }
+
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+          if (status === 'OK') {
+            resultsMap.setCenter(results[0].geometry.location);
+            resultsMap.setZoom(17);
+          } else {
+            alert('Geocode was not successful for the following reason: ' + status);
+          }
+        });
+      }
 
     var markers = [];
     // Map Init
     var map = document.getElementById('map');
     if (typeof(map) != 'undefined' && map != null) {
         google.maps.event.addDomListener(window, 'load', mainMap);
+
     }
 
 

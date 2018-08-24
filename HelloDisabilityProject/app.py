@@ -167,8 +167,9 @@ def contentCF(selectedfac, lat, lng):
     t = [0,0,0,0,0,0, lat, lng]
 
     s = selectedfac.split(',')
+    print(s)
     for i in s:
-        t[int(i)] += 1
+        t[int(i)-1] += 1
 
     print("knn t ",t,"\n result :",nbrs.kneighbors([t]))
 

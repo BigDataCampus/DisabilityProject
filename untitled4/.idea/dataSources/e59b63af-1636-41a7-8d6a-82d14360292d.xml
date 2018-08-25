@@ -24,7 +24,7 @@
     <column id="12" parent="6" name="facility_id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
-      <SequenceIdentity>1</SequenceIdentity>
+      <NotNull>1</NotNull>
     </column>
     <column id="13" parent="6" name="place_id">
       <Position>2</Position>
@@ -34,23 +34,19 @@
     <column id="14" parent="6" name="facility_available_name">
       <Position>3</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="15" parent="6" name="facility_is_available">
       <Position>4</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <key id="16" parent="6">
       <ColNames>facility_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="17" parent="6">
-      <ColNames>place_id</ColNames>
+    <foreign-key id="17" parent="6" name="FACILITY_PLACE_place_id_fk">
+      <ColNames>facility_id</ColNames>
       <RefTableName>PLACE</RefTableName>
       <RefColNames>place_id</RefColNames>
-      <OnDelete>cascade</OnDelete>
-      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <column id="18" parent="7" name="info_id">
       <Position>1</Position>
@@ -83,100 +79,91 @@
     </foreign-key>
     <column id="24" parent="8" name="place_id">
       <Position>1</Position>
-      <DataType>INTEGER|0s</DataType>
-      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
     </column>
     <column id="25" parent="8" name="place_name">
       <Position>2</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="26" parent="8" name="lat">
       <Position>3</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="27" parent="8" name="lng">
       <Position>4</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="28" parent="8" name="place_address">
       <Position>5</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <column id="29" parent="8" name="category">
       <Position>6</Position>
       <DataType>TEXT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
-    <key id="30" parent="8">
-      <ColNames>place_id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="31" parent="9" name="type">
+    <column id="30" parent="9" name="type">
       <Position>1</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="32" parent="9" name="name">
+    <column id="31" parent="9" name="name">
       <Position>2</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="33" parent="9" name="tbl_name">
+    <column id="32" parent="9" name="tbl_name">
       <Position>3</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="34" parent="9" name="rootpage">
+    <column id="33" parent="9" name="rootpage">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
     </column>
-    <column id="35" parent="9" name="sql">
+    <column id="34" parent="9" name="sql">
       <Position>5</Position>
       <DataType>text|0s</DataType>
     </column>
-    <column id="36" parent="10" name="name">
+    <column id="35" parent="10" name="name">
       <Position>1</Position>
     </column>
-    <column id="37" parent="10" name="seq">
+    <column id="36" parent="10" name="seq">
       <Position>2</Position>
     </column>
-    <column id="38" parent="11" name="id">
+    <column id="37" parent="11" name="id">
       <Position>1</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="39" parent="11" name="username">
+    <column id="38" parent="11" name="username">
       <Position>2</Position>
       <DataType>VARCHAR(80)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="11" name="email">
+    <column id="39" parent="11" name="email">
       <Position>3</Position>
       <DataType>VARCHAR(120)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="41" parent="11" name="sqlite_autoindex_user_1">
+    <index id="40" parent="11" name="sqlite_autoindex_user_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>username</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <index id="42" parent="11" name="sqlite_autoindex_user_2">
+    <index id="41" parent="11" name="sqlite_autoindex_user_2">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>email</ColNames>
       <ColumnCollations></ColumnCollations>
       <Unique>1</Unique>
     </index>
-    <key id="43" parent="11">
+    <key id="42" parent="11">
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="44" parent="11">
+    <key id="43" parent="11">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_user_1</UnderlyingIndexName>
     </key>
-    <key id="45" parent="11">
+    <key id="44" parent="11">
       <ColNames>email</ColNames>
       <UnderlyingIndexName>sqlite_autoindex_user_2</UnderlyingIndexName>
     </key>

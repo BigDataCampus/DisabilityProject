@@ -1,0 +1,628 @@
+{% extends 'base2.html' %}
+
+{% block content %}
+
+
+
+
+<!-- Content
+================================================== -->
+
+     <div class="container">
+
+
+          <!-- Map
+    ================================================== -->
+        <div id="map-container" class="contact-map margin-bottom-60">
+
+            <div id="map" data-map-zoom="11" dd='{{ places | tojson }}'>
+            <!-- map goes here -->
+            </div>
+        <div class="padding-top-100">
+
+            <img src="static/images/gu_count/gu_geo_YlOrBr.png"/>
+
+        </div>
+        </div>
+
+
+
+{#    <h1 class="headline margin-bottom-30">서울시 전체 편의 시설 수</h1>#}
+
+
+
+{#    <!-- Map Container -->#}
+{#        <div class="contact-map margin-bottom-60">#}
+{##}
+{##}
+{#    <!-- Google Maps -->#}
+{#        <div class="sidebar-textbox">#}
+{#        </div>#}
+{#		<div id="singleListingMap" data-latitude="37.5596521" data-longitude="126.954576" data-map-icon="im im-icon-Map2"></div>#}
+{#		<a href="#" id="streetView">Street View</a> #}
+{#    <!-- Google Maps / End -->#}
+{#            #}
+{#        <div class="clearfix"></div>#}
+{#        </div>#}
+{#    <!-- Map Container / End -->#}
+
+
+
+    <div class="col-md-10">
+<div>
+    <a href="#" id="chart_name_barchart" class="button medium border"><span class="im im-icon-Bar-Chart5"></span> barchart</a>
+    <a href="#" id="chart_name_polarArea" class="button medium border"><span class="im im-icon-Pie-Chart2"></span> polarArea</a>
+    <a href="#" id="chart_name_Radar" class="button medium border"><span class="im im-icon-Statistic"></span> Radar</a>
+    <canvas id="chart" ></canvas>
+</div>
+{#    <button  id="chart_name_barchart"  class="button medium border"><span class="im im-icon-Bar-Chart5"></span>barchart</button>#}
+{#    <button  id="chart_name_polarArea"  class="button medium border"><span class="im im-icon-Bar-Chart5">polarArea</span></button>#}
+{#    <button  id="chart_name_Radar"  class="button medium border"><span class="im im-icon-Bar-Chart5">Radar</span></button>#}
+{#    <img src="static/images/gu_count/total_facility.png"/>#}
+
+
+
+			<!-- Contact Details -->
+			<div class="sidebar-textbox">
+                <p>가장 많은 시설을 보유한 구: 송파구</p>
+                <p>가장 적은 시설을 보유한 구: 동대문구</p>
+            </div>
+    </div>
+
+     </div>
+
+{#    #}
+{#    #}
+{#	<!-- Office -->#}
+{#	<div class="address-box-container">#}
+{#		<div class="address-container" data-background-image="images/our-office.jpg">#}
+{#			<div class="office-address">#}
+{#				<h3>Our Office</h3>#}
+{#				<ul>#}
+{#					<li>John Street 304</li>#}
+{#					<li>New York</li>#}
+{#					<li>Phone (123) 123-456 </li>#}
+{#				</ul>#}
+{#			</div>#}
+{#		</div>#}
+{##}
+{##}
+{##}
+{#	</div>#}
+{#	<!-- Office / End -->#}
+{#    #}
+
+
+{##}
+{##}
+{##}
+{#<!-- Container / Start -->#}
+{#<div class="container">#}
+{##}
+{#<h1 class="headline margin-bottom-30">카테고리 편의시설 </h1>#}
+{#<img src="static/images/category_facility/total_facility.png"/>#}
+{#    <h2>여가생활</h2>#}
+{#    <div class="contact-map margin-bottom-60">#}
+{##}
+{#		<!-- Contact Details -->#}
+{##}
+{#		<div>#}
+{#            <h3>영화관/공연장</h3>#}
+{#            <img src="static/images/gu_count/movie_22.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{##}
+{#        <div>#}
+{#            <h3>수퍼마켓·도매·소매시장</h3>#}
+{#            <img src="static/images/gu_count/market_25.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#    </div>#}
+{##}
+{#<div class="contact-map margin-bottom-60">#}
+{##}
+{##}
+{##}
+{#        <div>#}
+{#            <h3>일반 숙박시설</h3>#}
+{#            <img src="static/images/gu_count/hotel_23.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{##}
+{##}
+{#        <div class="col-md-11">#}
+{#            <h3>도서관</h3>#}
+{#            <img src="static/images/gu_count/library_24.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{#    </div>#}
+{##}
+{##}
+{#    <div class="contact-map margin-bottom-60">#}
+{##}
+{##}
+{#        <div class="col-md-8">#}
+{#            <h3>미용, 목욕</h3>#}
+{#            <img src="static/images/gu_count/beauty_18.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{##}
+{#        <div class="col-md-8">#}
+{#            <h3>체육관(운동장)</h3>#}
+{#            <img src="static/images/gu_count/gym_18.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{##}
+{#        <div class="col-md-8">#}
+{#            <h3>공원</h3>#}
+{#            <img src="static/images/gu_count/park_17.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{##}
+{#        <div class="col-md-8">#}
+{#            <h3>음식점</h3>#}
+{#            <img src="static/images/gu_count/resturant_25.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{##}
+{#        <div class="col-md-8">#}
+{#            <h3>전시장</h3>#}
+{#            <img src="static/images/gu_count/exhibition_12.png"/>#}
+{#			<!-- Contact Details -->#}
+{#            <div class="sidebar-textbox">#}
+{#                <p>가장 많은 시설을 보유한 구: 송파구</p>#}
+{#                <p>가장 적은 시설을 보유한 구: 동대문구</p>#}
+{#            </div>#}
+{#		</div>#}
+{##}
+{#    </div>#}
+{##}
+{##}
+{#        <div>#}
+{##}
+{#        </div>#}
+{##}
+{##}
+{#		<!-- Contact Form -->#}
+{#		<div class="col-md-pull-8">#}
+{##}
+{#			<section id="contact">#}
+{#				<h4 class="headline margin-bottom-35">Contact Form</h4>#}
+{##}
+{#				<div id="contact-message"></div>#}
+{##}
+{#					<form method="post" action="contact.php" name="contactform" id="contactform" autocomplete="on">#}
+{##}
+{#					<div class="row">#}
+{#						<div class="col-md-6">#}
+{#							<div>#}
+{#								<input name="name" type="text" id="name" placeholder="Your Name" required="required" />#}
+{#							</div>#}
+{#						</div>#}
+{##}
+{#						<div class="col-md-6">#}
+{#							<div>#}
+{#								<input name="email" type="email" id="email" placeholder="Email Address" pattern="^[A-Za-z0-9](([_\.\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\.\-]?[a-zA-Z0-9]+)*)\.([A-Za-z]{2,})$" required="required" />#}
+{#							</div>#}
+{#						</div>#}
+{#					</div>#}
+{##}
+{#					<div>#}
+{#						<input name="subject" type="text" id="subject" placeholder="Subject" required="required" />#}
+{#					</div>#}
+{##}
+{#					<div>#}
+{#						<textarea name="comments" cols="40" rows="3" id="comments" placeholder="Message" spellcheck="true" required="required"></textarea>#}
+{#					</div>#}
+{##}
+{#					<input type="submit" class="submit button" id="submit" value="Submit Message" />#}
+{##}
+{#					</form>#}
+{#			</section>#}
+{#		</div>#}
+{#		<!-- Contact Form / End -->#}
+{##}
+{##}
+{#	</div>#}
+{##}
+{##}
+{#<!-- Container / End -->#}
+{##}
+{##}
+
+
+
+
+
+<script type="text/javascript" src="/static/scripts/jquery-2.2.0.min.js"></script>
+
+
+<!-- Maps -->
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete"></script>
+<script type="text/javascript" src="/static/scripts/infobox.min.js"></script>
+<script type="text/javascript" src="/static/scripts/markerclusterer.js"></script>
+<script type="text/javascript" src="/static/FF32/maps.js"></script>
+
+
+<!-- chart -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+<script>
+
+
+
+
+
+document.getElementById("chart_name_barchart").addEventListener("click", function(){
+    swapCanvases();
+
+    $(document).ready(function() {
+        $.ajax({
+            url : '/test',
+            method: "GET",
+            success : function (data) {
+            var ctx = document.getElementById("chart");
+            var myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: data.x,
+
+                    datasets: [{
+
+                        label: "편의 시설 수",
+                        data:data.y,
+                        backgroundColor: [
+
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+                            "rgba(0, 64, 255, 0.6)",
+
+
+
+
+
+                        ],
+                        borderColor: [
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+                             "rgba(0, 64, 255, 1)",
+
+
+
+
+
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+
+
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero:true
+                            }
+                        }]
+                    }
+                }
+    });
+            console.log(data.x)
+        }
+    });
+
+        })
+
+});
+
+document.getElementById("chart_name_polarArea").addEventListener("click", function(){
+    swapCanvases();
+    $(document).ready(function() {
+    $.get('/test', function (data) {
+        var ctx = document.getElementById("chart");
+        var myRadarChart = new Chart(ctx, {
+            type: 'polarArea',
+            data :{
+                datasets: [{
+                    data: data.y,
+                    backgroundColor: [
+
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+
+
+
+
+
+            ],
+                    borderColor: [
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+
+
+
+
+
+            ],
+                }],
+
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+                labels: data.x,
+
+             },
+        });
+});
+});
+
+});
+
+
+document.getElementById("chart_name_Radar").addEventListener("click", function(){
+    swapCanvases();
+    $(document).ready(function() {
+    $.get('/test', function (data) {
+        var ctx = document.getElementById("chart");
+        var myRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data :{
+
+                // These labels appear in the legend and in the tooltips when hovering different arcs
+                labels: data.x,
+
+                datasets: [{
+                    data: data.y,
+                    backgroundColor: [
+
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+                "rgba(0, 64, 255, 0.6)",
+
+
+
+
+
+            ],
+                    borderColor: [
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+                 "rgba(0, 64, 255, 1)",
+
+
+
+
+
+            ],
+                }],
+
+
+
+             },
+        });
+});
+});
+
+});
+
+
+function swapCanvases(){
+
+   var canvas1=document.getElementById('chart_name_barchart');
+   var canvas2=document.getElementById('chart_name_polarArea');
+   var canvas2=document.getElementById('chart_name_Radar');
+
+
+ if(canvas1.style.visibility=='visible' && canvas2.style.visibility=='visible'){
+   canvas1.style.visibility='hidden';
+   canvas2.style.visibility='hidden';
+   canvas3.style.visibility='visible';
+ }
+ if(canvas1.style.visibility=='visible' && canvas3.style.visibility=='visible'){
+   canvas1.style.visibility='hidden';
+   canvas3.style.visibility='hidden';
+   canvas2.style.visibility='visible';
+ }
+  if(canvas2.style.visibility=='visible' && canvas3.style.visibility=='visible'){
+   canvas2.style.visibility='hidden';
+   canvas3.style.visibility='hidden';
+   canvas1.style.visibility='visible';
+ }
+}
+
+
+
+</script>
+
+<script>
+  function initAutocomplete() {
+    var input = document.getElementById('autocomplete-input');
+    var autocomplete = new google.maps.places.Autocomplete(input);
+
+    autocomplete.addListener('place_changed', function() {
+      var place = autocomplete.getPlace();
+      if (!place.geometry) {
+        window.alert("No details available for input: '" + place.name + "'");
+        return;
+      }
+    });
+
+	if ($('.main-search-input-item')[0]) {
+	    setTimeout(function(){
+	        $(".pac-container").prependTo("#autocomplete-container");
+	    }, 300);
+	}
+}
+</script>
+{% endblock %}

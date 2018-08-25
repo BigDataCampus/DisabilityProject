@@ -10,6 +10,7 @@ import json
 app = Flask(__name__)
 app.config.update({'SECRET_KEY':'password'})
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DisabilityDB.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 admin = Admin(app)

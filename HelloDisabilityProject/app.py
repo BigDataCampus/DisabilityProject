@@ -9,7 +9,7 @@ import json
 
 app = Flask(__name__)
 app.config.update({'SECRET_KEY':'password'})
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DB2.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///DB3.db'
 db = SQLAlchemy(app)
 
 admin = Admin(app)
@@ -102,16 +102,35 @@ def place_Setting():
         # places = Place.query.filter(Place.place_ID.in_(cf)).all()
 
     json_list = [i.serialize for i in places]
-    faclist = ['장애인 전용 주차구역','장애인용 관람석','장애인용 승강기','장애인용 화장실','주출입구 높이차이 제거','주출입구 접근로']
+    faclist = ['객실 및 침실',
+'경보 및 피난설비',
+'샤워실 및 탈의실',
+'세면대',
+'욕실',
+'음료대',
+'자동 출입구(문)',
+'자동 판매기',
+'장애인 전용 주차구역',
+'장애인용 관람석',
+'장애인용 승강기',
+'장애인용 화장실',
+'점자블록',
+'접수대 및 작업대',
+'주출입구 높이차이 제거',
+'주출입구 접근로',]
     return render_template('base2.html', places = json_list, faclist = faclist)
 
 
 @app.route('/getData')
 def getData():
     data = request.args.get('a')
+    print("getdata place_id : ", data)
+    places = Place.query.filter_by(place_ID=data)
     fac = Facility.query.filter_by(place_ID=data)
+
+    p = [i.serialize for i in places]
     f = [i.serialize for i in fac]
-    return json.dumps(f)
+    return jsonify(json.dumps(p), json.dumps(f))
 
 
 @app.route('/listings-single/<place_id>')
@@ -155,16 +174,28 @@ def contentCF(selectedfac, lat, lng):
     dummy.drop('facility_ID', axis=1, inplace=True)
     dummy.drop(['category', 'place_address'], inplace=True, axis=1)
 
-    dummy.columns = ['place_id','장애인 전용 주차구역','장애인용 관람석','장애인용 승강기','장애인용 화장실','주출입구 높이차이 제거','주출입구 접근로','lat', 'lng']
-
-
-
+    dummy.columns = ['place_id','객실 및 침실',
+'경보 및 피난설비',
+'샤워실 및 탈의실',
+'세면대',
+'욕실',
+'음료대',
+'자동 출입구(문)',
+'자동 판매기',
+'장애인 전용 주차구역',
+'장애인용 관람석',
+'장애인용 승강기',
+'장애인용 화장실',
+'점자블록',
+'접수대 및 작업대',
+'주출입구 높이차이 제거',
+'주출입구 접근로','lat', 'lng']
 
     X = dummy.iloc[:, 1:]
     print(X.head())
     nbrs = NearestNeighbors().fit(X)
 
-    t = [0,0,0,0,0,0, lat, lng]
+    t = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, lat, lng]
 
     s = selectedfac.split(',')
     print(s)

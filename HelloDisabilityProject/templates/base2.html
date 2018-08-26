@@ -10,7 +10,7 @@
     <!-- CSS
     ================================================== -->
     <link rel="stylesheet" href="/static/css/style22.css">
-    <link rel="stylesheet" href="/static/css/colors/main.css" id="colors">
+    <link rel="stylesheet" href="/static/FF202/main.css" id="colors">
 
 
     <style>
@@ -112,14 +112,14 @@
             </form>
 
             <!-- Scroll Enabling Button -->
-            <a href="#" id="gonnafind" title="찍은데 추천고">찾아부려</a>
+            <a href="#" id="gonnafind" title="찍은데 추천고">장소 주변 추천</a>
             {#	<a href="#" id="scrollEnabling" title="Enable or disable scrolling on map">Enable Scrolling</a>#}
-            <a href="#" id="geoLocation" title="내위치주변 추천고">내꺼하자</a>
+            <a href="#" id="geoLocation" title="내위치주변 추천고">내 위치 주변 추천</a>
             <!-- Checkboxes -->
-            <h1 class="margin-top-30 margin-bottom-10" align="center">Amenities <span>(Select facility you need)</span>
+            <h1 class="margin-top-30 margin-bottom-10" align="center">편의시설 <span>(필요한 편의시설을 선택하세요)</span>
             </h1>
             <div class="checkboxes in-row margin-bottom-20">
-                {% for i in range(6) %}
+                {% for i in range(16) %}
                     <input id="check-{{ i }}" type="checkbox" name="check" value="{{ i }}">
                     <label for="check-{{ i }}">{{ faclist[i] }}</label>
                 {% endfor %}
@@ -284,7 +284,7 @@
 <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initAutocomplete&key=AIzaSyDQq5Nm_tQE5-0LMoN0UAU2YTL5CB4HWoE"></script>
 <script type="text/javascript" src="/static/scripts/infobox.min.js"></script>
 <script type="text/javascript" src="/static/scripts/markerclusterer.js"></script>
-<script type="text/javascript" src="/static/FF184/maps.js"></script>
+<script type="text/javascript" src="/static/FF202/maps.js"></script>
 
 
 <!-- Style Switcher

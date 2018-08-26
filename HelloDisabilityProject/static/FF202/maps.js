@@ -539,9 +539,6 @@ var infoBox_ratingType = 'star-rating';
         })
     }
 
-    // 와.. 비동기  {'lat':location.lat, 'lng':location.lng} 랑 동기에서 location.lat 뭐가 다른지 도저히 모르겠다 gg
-    // => 와 ㅅㅂ() 하나붙이니까 되네 와나 돌아버리겠네
-
     function setMapOnAll(map) {
         for (var i = 0; i < markers.length; i++) {
             markers[i].setMap(map);

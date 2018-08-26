@@ -193,7 +193,7 @@ def contentCF(selectedfac, lat, lng):
 
     X = dummy.iloc[:, 1:]
     print(X.head())
-    nbrs = NearestNeighbors().fit(X)
+    nbrs = NearestNeighbors(n_neighbors=20).fit(X)
 
     t = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, lat, lng]
 

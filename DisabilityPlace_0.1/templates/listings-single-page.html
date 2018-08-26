@@ -29,16 +29,15 @@
                 {% endfor %}
             </ul>
 
-            <!-- Location -->
-			<div id="listing-location" class="listing-section">
-				<h3 class="listing-desc-headline margin-top-60 margin-bottom-30">Location</h3>
+        </div>
+        <!-- Location -->
+        <div id="listing-location" class="listing-section sidebar">
+            <h3 class="listing-desc-headline margin-top-60 margin-bottom-30">Location</h3>
 
-				<div id="singleListingMap-container">
-					<div id="singleListingMap" data-latitude={{ info[0].lat }} data-longitude={{ info[0].lng }} data-map-icon="im im-icon-Hamburger"></div>
-					<a href="#" id="streetView">Street View</a>
-				</div>
-			</div>
-
+            <div id="singleListingMap-container">
+                <div id="singleListingMap" data-latitude={{ info[0].lat }} data-longitude={{ info[0].lng }} data-map-icon="im im-icon-Hamburger"></div>
+                <a href="#" id="streetView">Street View</a>
+            </div>
         </div>
 	</div>
 </div>

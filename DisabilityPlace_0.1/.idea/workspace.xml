@@ -10,18 +10,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/DisabilityPlace_0_1$DisabilityPlace_0_1.coverage" NAME="DisabilityPlace_0.1 Coverage Results" MODIFIED="1535273239461" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DisabilityPlace_0_1$DisabilityPlace_0_1.coverage" NAME="DisabilityPlace_0.1 Coverage Results" MODIFIED="1535292756247" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
-              <caret line="179" column="23" lean-forward="true" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
+            <state relative-caret-position="104">
+              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="e#0#77#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard-after-facility-map.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard-after-facility-map.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="dashboard-totalfacility.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard-totalfacility.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="20" selection-start-column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -29,29 +43,8 @@
       <file leaf-file-name="base2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="786">
-              <caret line="141" column="40" selection-start-line="141" selection-start-column="40" selection-end-line="141" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="maps.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/FF209/maps.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listings-single-page.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/listings-single-page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+            <state relative-caret-position="221">
+              <caret line="131" column="39" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -65,31 +58,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/header.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+            <state relative-caret-position="273">
+              <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/FF209/main.css">
+      <file leaf-file-name="listings-single-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/listings-single-page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="73" lean-forward="true" selection-start-column="73" selection-end-column="73" />
+            <state relative-caret-position="368">
+              <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style24.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/FF209/style24.css">
+      <file leaf-file-name="seoul_municipalities_geo.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/geo/seoul_municipalities_geo.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="edaboard-base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/edaboard-base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="10731" column="49" lean-forward="true" selection-start-line="10731" selection-start-column="49" selection-end-line="10731" selection-end-column="49" />
+            <state relative-caret-position="221">
+              <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="s.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/csv/s.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -112,24 +115,72 @@
       <find>info-box</find>
       <find>.map-box .listing-img-container::before</find>
       <find>.map-box .listing-img-container</find>
+      <find>row</find>
+      <find>list-item-conten</find>
+      <find>icon</find>
+      <find>listing-img-container</find>
+      <find>listing-img-container::</find>
+      <find>zoom</find>
+      <find>listing-sing</find>
+      <find>listings-</find>
+      <find>listing-item-content</find>
+      <find>h2</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/static/css/style22.css" />
-        <option value="$PROJECT_DIR$/static/css/style23.css" />
-        <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/static/FF202/main.css" />
-        <option value="$PROJECT_DIR$/static/FF204/main.css" />
         <option value="$PROJECT_DIR$/static/FF205/maps.js" />
-        <option value="$PROJECT_DIR$/templates/base2.html" />
         <option value="$PROJECT_DIR$/static/FF206/maps.js" />
         <option value="$PROJECT_DIR$/static/FF207/maps.js" />
         <option value="$PROJECT_DIR$/static/css/style24.css" />
         <option value="$PROJECT_DIR$/static/FF209/style24.css" />
-        <option value="$PROJECT_DIR$/templates/listings-single-page.html" />
         <option value="$PROJECT_DIR$/templates/header.html" />
+        <option value="$PROJECT_DIR$/static/FF209/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF210/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF211/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF212/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF213/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF214/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF215/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF216/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF217/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF218/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF218/style24.css" />
+        <option value="$PROJECT_DIR$/static/FF219/style24.css" />
+        <option value="$PROJECT_DIR$/static/FF220/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF221/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF222/style24.css" />
+        <option value="$PROJECT_DIR$/static/FF222/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF223/style24.css" />
+        <option value="$PROJECT_DIR$/static/FF224/style24.css" />
+        <option value="$PROJECT_DIR$/static/FF226/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF227/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF228/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF229/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF230/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF232/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF233/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF234/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF235/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF236/style24.css" />
+        <option value="$PROJECT_DIR$/static/FF238/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF239/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF240/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF242/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF243/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF244/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF245/maps.js" />
+        <option value="$PROJECT_DIR$/templates/base2.html" />
+        <option value="$PROJECT_DIR$/static/FF246/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF247/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF248/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF249/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF250/maps.js" />
+        <option value="$PROJECT_DIR$/static/FF251/style24.css" />
+        <option value="$PROJECT_DIR$/templates/listings-single-page.html" />
+        <option value="$PROJECT_DIR$/templates/edaboard-base.html" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -143,15 +194,17 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="582" />
+    <option name="y" value="58" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,13 +221,7 @@
               <item name="DisabilityPlace_0.1" type="b2602c69:ProjectViewProjectNode" />
               <item name="DisabilityPlace_0.1" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DisabilityPlace_0.1" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DisabilityPlace_0.1" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="FF209" type="462c0819:PsiDirectoryNode" />
+              <item name="FF252" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="DisabilityPlace_0.1" type="b2602c69:ProjectViewProjectNode" />
@@ -191,7 +238,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -202,14 +248,16 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static\FF209" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\templates" />
+      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static\geo" />
       <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static\images" />
       <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static" />
-      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\templates" />
-      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1" />
+      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static\place" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static\facility" />
+      <recent name="C:\Users\hangs\PycharmProjects\201808BigDataProject\DisabilityProject\DisabilityPlace_0.1\static\FF209" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -256,20 +304,30 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" x="0" y="0" width="337" height="638" id="Documentation" side_tool="true" visible="true" weight="0.012080537" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33050847" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28389263" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28791946" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -280,7 +338,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,16 +349,73 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="2249">
+          <caret line="179" column="23" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
           <folding>
-            <element signature="e#0#58#0" expanded="true" />
+            <element signature="e#0#77#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/static/js/vendor/jquery-3.3.1.min.js">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/templates/base2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1833">
+          <caret line="141" column="40" selection-start-line="141" selection-start-column="40" selection-end-line="141" selection-end-column="40" />
+        </state>
+      </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF252/maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/listings-single-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/basescript.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF252/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="73" lean-forward="true" selection-start-column="73" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF252/style24.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139503">
+          <caret line="10731" column="49" lean-forward="true" selection-start-line="10731" selection-start-column="49" selection-end-line="10731" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/static/js/vendor/jquery-3.3.1.min.js" />
     <entry file="file://$PROJECT_DIR$/static/js/vendor/jquery-3.3.1.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -322,6 +436,75 @@
     <entry file="file://$PROJECT_DIR$/static/images/logo1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF252/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="73" lean-forward="true" selection-start-column="73" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/미용원·목욕장.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/welfare.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/교육원·직업훈련소·학원.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/kindergarten.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF252/style24.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="10762" column="21" lean-forward="true" selection-start-line="10762" selection-start-column="21" selection-end-line="10762" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/종교집회장.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/FF252/maps.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/공원.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/place/경찰서.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="131" column="39" selection-start-line="131" selection-start-column="8" selection-end-line="131" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/csv/s.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask_sqlalchemy/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="793" selection-start-line="793" selection-end-line="793" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/listings-single-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/geo/seoul_municipalities_geo.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/basescript.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -329,58 +512,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/templates/dashboard-facility-after-eda.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="179" column="23" lean-forward="true" selection-start-line="179" selection-start-column="23" selection-end-line="179" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="104">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/FF209/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="73" lean-forward="true" selection-start-column="73" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/FF209/style24.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="10731" column="49" lean-forward="true" selection-start-line="10731" selection-start-column="49" selection-end-line="10731" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/FF209/maps.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="38" selection-start-line="19" selection-start-column="38" selection-end-line="19" selection-end-column="38" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/listings-single-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="786">
-          <caret line="141" column="40" selection-start-line="141" selection-start-column="40" selection-end-line="141" selection-end-column="40" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard-after-facility-map.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="33" lean-forward="true" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
+        <state relative-caret-position="273">
+          <caret line="21" column="22" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edaboard-base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="158" column="43" selection-start-line="158" selection-start-column="43" selection-end-line="158" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard-totalfacility.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
